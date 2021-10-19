@@ -1,0 +1,65 @@
+@font-face {
+  font-family: "shabnam";
+  font-display: swap;
+  src: url("./shabnam/Shabnam.woff");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "shabnam";
+  font-display: swap;
+  src: url("./shabnam/Shabnam-Thin.woff");
+  font-weight: 100;
+}
+@font-face {
+  font-family: "shabnam";
+  font-display: swap;
+  src: url("./shabnam/Shabnam-Light.woff");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "shabnam";
+  font-display: swap;
+  src: url("./shabnam/Shabnam-Medium.woff");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "shabnam";
+  font-display: swap;
+  src: url("./shabnam/Shabnam-Bold.woff");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "num";
+  font-display: swap;
+  src: url("./shabnam/Shabnam-Bold-FD.woff");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "num";
+  font-display: swap;
+  src: url("./shabnam/Shabnam-Medium-FD.woff");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "num";
+  font-display: swap;
+  src: url("./shabnam/Shabnam-Light-FD.woff");
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "num";
+  font-display: swap;
+  src: url("./shabnam/Shabnam-Thin-FD.woff");
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "num";
+  font-display: swap;
+  src: url("./shabnam/Shabnam-FD.woff");
+  font-weight: normal;
+}
