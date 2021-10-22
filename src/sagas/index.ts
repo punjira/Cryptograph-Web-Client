@@ -1,5 +1,10 @@
-import { all } from "redux-saga/effects";
+import { all, fork } from "redux-saga/effects";
+import { marketSentimentEffect } from "./sagas/trend.saga";
+
+function* initialFlow() {
+  yield all([fork(marketSentimentEffect)]);
+}
 
 export default function* rootSagaWatcher() {
-  yield all([]);
+  yield all([fork(initialFlow)]);
 }
