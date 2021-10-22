@@ -15,3 +15,5 @@ const store = createStoreWithMiddleware(RootReducer);
 sagaMiddleware.run(RootSaga);
 
 export default store;
+
+export type AppDispatch = typeof store.dispatch;
