@@ -4,7 +4,9 @@ import { RootState } from "../../reducers";
 import { selectPrice } from "../../selectors/latest-price.selector";
 import { Coin } from "../../types/market.types";
 
-interface CoinInfoProps extends Coin {}
+interface CoinInfoProps extends Coin {
+  link?: string;
+}
 
 const CoinInfo: FC<CoinInfoProps> = ({ ...props }) => {
   const latest_price = useSelector((state: RootState) =>
