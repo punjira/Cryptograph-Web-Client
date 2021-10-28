@@ -35,7 +35,7 @@ const options: MenuItemProps[] = [
 
 const SideMenu: FC = props => {
   return (
-    <div className="fixed flex flex-col align-middle bottom-2">
+    <div className="fixed flex flex-col align-middle bottom-2 right-0 mr-1">
       {options.map((el, index) => (
         <Item {...el} animationOrder={options.length - index} key={el.link} />
       ))}
