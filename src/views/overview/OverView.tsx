@@ -20,8 +20,8 @@ const OverView: FC = () => {
   }, []);
   return (
     <PageLayout>
-      <MarketBar markets={trendingMarkets} />
-      <div>{active && <CoinInfo {...active} />}</div>
+      <MarketBar markets={trendingMarkets} setActive={handleClick} />
+      <div className="p-1 md:p-3">{active && <CoinInfo {...active} />}</div>
     </PageLayout>
   );
 };

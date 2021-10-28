@@ -1,9 +1,12 @@
+/**
+ * calling clear should avoid any memory leak from setTimeOut
+ */
 import { useEffect, useState } from "react";
 import { Coin } from "../../../types/market.types";
 
 export default function (
   coins: Coin[]
-): [Coin | undefined, (d: Coin) => void, () => void] {
+): [Coin | undefined, (d: string) => void, () => void] {
   const [activeCoin, setActiveCoin] = useState<Coin | undefined>();
   let timeout: NodeJS.Timeout;
   useEffect(() => {
@@ -23,8 +26,9 @@ export default function (
   }, [activeCoin]);
   return [
     activeCoin,
-    (coin: Coin) => {
-      setActiveCoin(coin);
+    (coin: string) => {
+      clearTimeout(timeout);
+      setActiveCoin(coins.find(el => el.ticker === coin));
     },
     () => {
       clearTimeout(timeout);

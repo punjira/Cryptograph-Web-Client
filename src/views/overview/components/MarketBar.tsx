@@ -5,6 +5,7 @@ import MarketItem from "./MarketItem";
 
 interface MarketBarProps {
   markets: Coin[];
+  setActive: (d: string) => void;
 }
 
 const StyledContainer = styled.div.attrs({
@@ -25,7 +26,12 @@ const MarketBar: FC<MarketBarProps> = props => {
     <StyledContainer>
       <div className="flex flex-row w-max">
         {props.markets.map((el, index) => (
-          <MarketItem key={el.ticker} {...el} animationDelay={index} />
+          <MarketItem
+            key={el.ticker}
+            setActive={props.setActive}
+            {...el}
+            animationDelay={index}
+          />
         ))}
       </div>
     </StyledContainer>

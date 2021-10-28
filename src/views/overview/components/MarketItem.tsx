@@ -6,6 +6,7 @@ import tw from "twin.macro";
 
 interface MarketItemProps extends Coin {
   animationDelay: number;
+  setActive: (d: string) => void;
 }
 
 const AnimationVariant: Variants = {
@@ -35,6 +36,7 @@ const MarketItem: FC<MarketItemProps> = ({ animationDelay, ...props }) => {
       whileHover={{
         scale: 1.04
       }}
+      onClick={() => props.setActive(props.ticker)}
     >
       <img src={props.image} alt="coin-image" className="w-7 h-7 mr-1" />
       <h3 className="overflow-hidden">{props.ticker}</h3>
