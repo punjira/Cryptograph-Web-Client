@@ -3,3 +3,8 @@ export interface Coin {
   name: string;
   ticker: string;
 }
+
+export interface LastPrice {
+  ticker: string;
+  price: number;
+}
