@@ -2,6 +2,7 @@
   "base_address": "http://cryptograph.com",
   "prefix": "",
   "endpoints": {
-    "market_sentiment": "/study/trend/sentiment"
+    "market_sentiment": "/study/trend/sentiment",
+    "trending_markets": "/coin/featured/topten"
   }
 }
