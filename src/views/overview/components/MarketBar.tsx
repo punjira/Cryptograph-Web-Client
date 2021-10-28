@@ -25,7 +25,7 @@ const MarketBar: FC<MarketBarProps> = props => {
     <StyledContainer>
       <div className="flex flex-row w-max">
         {props.markets.map((el, index) => (
-          <MarketItem {...el} animationDelay={index} />
+          <MarketItem key={el.ticker} {...el} animationDelay={index} />
         ))}
       </div>
     </StyledContainer>
