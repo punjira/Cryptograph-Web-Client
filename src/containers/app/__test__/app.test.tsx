@@ -6,6 +6,8 @@ jest.mock(
   () => () => <div>sentiment</div>
 );
 
+jest.mock("../../../components/menu/Menu.tsx", () => () => <div>menu</div>);
+
 describe("app container", () => {
   let wrapper: RenderResult;
   beforeEach(() => {
@@ -16,5 +18,8 @@ describe("app container", () => {
   });
   it("should render sentiment bar", () => {
     expect(wrapper.getByText("sentiment")).toBeInTheDocument();
+  });
+  it("should render menu", () => {
+    expect(wrapper.getByText("menu")).toBeInTheDocument();
   });
 });
