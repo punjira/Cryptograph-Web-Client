@@ -12,10 +12,12 @@ import { combineReducers } from "redux";
 
 import marketStateReducer from "./reducers/market-sentiment.reducer";
 import tendingMarketsReducer from "./reducers/trending-markets.reducer";
+import latestPriceReducer from "./reducers/latest-market.reducer";
 
 const rootReducer = combineReducers({
   marketStateReducer,
-  tendingMarketsReducer
+  tendingMarketsReducer,
+  latestPriceReducer
 });
 
 export type RootState = ReturnType<typeof rootReducer>;
