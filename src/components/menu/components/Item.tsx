@@ -44,7 +44,7 @@ const Item: FC<ItemProps> = ({ icon, link, animationOrder, active = true }) => {
       custom={animationOrder}
       initial="hidden"
       animate="visible"
-      className="inline-block m-1 ml-2"
+      className="inline-block m-1"
     >
       <StyledContainer to={link}>{icon}</StyledContainer>
     </motion.div>
