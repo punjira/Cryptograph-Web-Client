@@ -27,7 +27,7 @@ const V: Variants = {
 };
 
 const StyledContainer = styled(NavLink).attrs({
-  className: `bg-gray-800 p-2 rounded-full shadow-md cursor-pointer inline-block`
+  className: `flex bg-gray-800 p-2 rounded-0 md:rounded-full shadow-md cursor-pointer`
 })`
   &:hover {
     ${tw`bg-gray-700`}
@@ -44,7 +44,7 @@ const Item: FC<ItemProps> = ({ icon, link, animationOrder, active = true }) => {
       custom={animationOrder}
       initial="hidden"
       animate="visible"
-      className="inline-block m-1"
+      className="m-0 md:m-1"
     >
       <StyledContainer to={link}>{icon}</StyledContainer>
     </motion.div>
