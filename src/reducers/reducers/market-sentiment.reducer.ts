@@ -2,7 +2,6 @@
  * market sentiment reducer
  */
 
-import { Action } from "redux";
 import {
   GetMarketSentimentActions,
   GET_MARKET_SENTIMENT
