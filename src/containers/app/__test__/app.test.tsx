@@ -1,9 +1,20 @@
-import { render } from "../../../helpers/test-utils";
+import { render, RenderResult } from "../../../helpers/test-utils";
 import App from "../App";
 
+jest.mock(
+  "../../../components/market-sentiment-bar/MarketSentimentBar.tsx",
+  () => () => <div>sentiment</div>
+);
+
 describe("app container", () => {
+  let wrapper: RenderResult;
+  beforeEach(() => {
+    wrapper = render(<App />);
+  });
   it("should render", () => {
-    const wrapper = render(<App />);
     expect(wrapper).toBeTruthy();
+  });
+  it("should render sentiment bar", () => {
+    expect(wrapper.getByText("sentiment")).toBeInTheDocument();
   });
 });
