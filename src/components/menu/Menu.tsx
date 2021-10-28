@@ -13,11 +13,11 @@ const icon_default_style = "text-md text-gray-300 m-1";
 const options: MenuItemProps[] = [
   {
     icon: <FaHome title="home" className={icon_default_style} />,
-    link: "/app"
+    link: "/overview"
   },
   {
     icon: <FaChartPie title="markets" className={icon_default_style} />,
-    link: "/market"
+    link: "/markets"
   },
   {
     icon: <FaUserAlt title="user" className={icon_default_style} />,
