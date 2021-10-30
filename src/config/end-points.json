@@ -4,6 +4,7 @@
   "endpoints": {
     "market_sentiment": "/study/trend/sentiment",
     "trending_markets": "/coin/featured/topten",
-    "latest_prices": "/candles/price"
+    "latest_prices": "/candles/price",
+    "candlesticks": "/candles/history"
   }
 }
