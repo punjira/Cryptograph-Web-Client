@@ -3,6 +3,8 @@ import { getLatestPriceActionCreator } from "../../actions/latest-price.action";
 import CoinInfo from "../../components/coin-info/CoinInfo";
 import { useAppDispatch, useAppSelector } from "../../hooks/typed-selector";
 import PageLayout from "../../layout/PageLayout";
+import ChartHolder from "./components/ChartHolder";
+import FrameSelector from "./components/FrameSelector";
 import MarketBar from "./components/MarketBar";
 import useActiveHook from "./hooks/useActiveHook";
 
@@ -21,7 +23,15 @@ const OverView: FC = () => {
   return (
     <PageLayout>
       <MarketBar markets={trendingMarkets} setActive={handleClick} />
-      <div className="p-1 md:p-3">{active && <CoinInfo {...active} />}</div>
+      <div className="p-1 md:p-3">
+        {active && (
+          <div>
+            <FrameSelector />
+            <CoinInfo {...active} />
+            <ChartHolder ticker={active.ticker} />
+          </div>
+        )}
+      </div>
     </PageLayout>
   );
 };
